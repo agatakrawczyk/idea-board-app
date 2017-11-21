@@ -3,8 +3,15 @@
 <div class="jumbotron">
   <div class="container">
     <h2 class="display-2"> All notes </h2>
+
+    <%= form_tag "", method: "get" do %>
+      <p><%= text_field_tag("q", @q) %></p>
+      <p><%= submit_tag("Search") %></p>
+    <% end %>
+
     <%= link_to "Back", home_path %><br>
   </div>
+
 </div>
     <% @notes.each do |note| %>
       <div class="card-deck">

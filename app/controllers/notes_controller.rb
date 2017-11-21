@@ -3,6 +3,12 @@ class NotesController < ApplicationController
 
   def index
     @notes = current_user.notes.order(created_at: "desc")
+
+    if params[:q]
+      @q = params[:q]
+      # @notes = @notes.where("title ilike ? or text ilike ?", "%#{@q}%", "%#{@q}%")
+      @notes = @notes.where("title ilike :q or body ilike :q", q: "%#{@q}%")
+    end
   end
 
   def new
