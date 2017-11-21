@@ -1,0 +1,10 @@
+<%= link_to "Back", notes_path %>
+
+<div class="jumbotron">
+  <div class="container">
+    <h2 class="display-2"> <%= @note.title %> </h2>
+      <p class="lead"> <%= @note.body %> </p>
+        <%= link_to "Edit note", edit_note_path %>
+        <%= link_to "Delete note", note_path, method: "delete", data: { confirm: "Are u sure?" } %>
+  </div>
+</div>

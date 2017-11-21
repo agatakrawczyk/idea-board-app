@@ -1,0 +1,16 @@
+<div class="jumbotron">
+  <div class="container">
+    <h2 class="display-2"> What to do ? </h2>
+    <div class="card text-white bg-dark mb-3" style="max-width: 30rem;">
+      <div class="card-header"><%= link_to "SHOW ALL NOTES", notes_path %></div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="max-width: 30rem;">
+      <div class="card-header"><%= link_to "ADD NEW NOTE", new_note_path %></div>
+    </div>
+  </div>
+
+  <%= month_calendar do |date| %>
+    <%= date.day %>
+  <% end %>
+
+</div>

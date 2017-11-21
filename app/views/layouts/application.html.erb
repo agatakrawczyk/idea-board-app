@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="masterhead clearfix">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <% if user_signed_in? %>
+          <a class="nav-link">
+          <%= link_to "HOME", home_path %></a>
+          <a class="nav-link">
+          <%= link_to "ALL NOTES", notes_path %></a>
+          <a class="nav-link">
+          <%= link_to "NEW NOTE", new_note_path %></a>
+          <a class="navbar-brand">
+            <%= link_to "Log out", destroy_user_session_path, method: :delete %></a>
+        <% else %>
+          <a class="navbar-brand">
+          <%= link_to "Sign in", new_user_session_path %></a>
+          <a class="nav-link">
+          <%= link_to "Register", new_user_registration_path %></a>
+        <% end %>
+        </nav>
+      </div>
+    </header>
+
+
+    <% flash.each do |name, error| %>
+      <div class="<%= name %>">
+        <%= error %>
+      </div>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>
