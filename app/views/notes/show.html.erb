@@ -5,7 +5,7 @@
     <h2 class="display-2"> <%= @note.title %> </h2>
 
     <% if @note.image.file? %>
-      <%= image_tag @note.image.image-url(:large) %>
+      <%= image_tag @note.image.url(:large) %>
     <% end %>
 
     <p class="lead"> <%= @note.body %> </p>

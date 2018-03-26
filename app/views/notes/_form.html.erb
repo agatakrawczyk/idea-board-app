@@ -1,5 +1,3 @@
-
-
 <%= form_for @note, html: { multipart: true } do |f| %>
   <% if @note.errors.any? %>
     <div id="error_explanation">
@@ -19,6 +17,11 @@
   <div>
     <%= f.label :image %>
     <%= f.file_field :image %>
+  </div>
+
+  <div>
+    <%= f.label :videos %>
+    <%= f.text_field :videos %>
   </div>
 
   <div>

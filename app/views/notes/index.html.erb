@@ -19,10 +19,8 @@
             <div class="card-body">
               <%= link_to " ", note_path(note.id), class: "card-link" %>
 
-              <% if note.image %>
+              <% if note.image.file? %>
                 <%= image_tag note.image.url(:thumb) %>
-              <% else %>
-                ""
               <% end %>
 
               <h4 class="card-title"><%= note.title %></h4>
