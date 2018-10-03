@@ -3,7 +3,7 @@
     <div id="error_explanation">
       <h2>
         <%= pluralize(model.errors.count, "error") %>
-        prohibite this note from being saved!
+        prohibite this idea from being saved!
       </h2>
 
       <ul>
@@ -35,9 +35,8 @@
   </div>
 
   <div>
-    <%= f.submit %>
+    <%= f.submit("Save idea") %>
   </div>
-
 <% end %>
 
 

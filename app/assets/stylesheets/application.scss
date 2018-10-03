@@ -14,6 +14,10 @@
  *= require_self
  */
 
+body {
+  font-family: monospace;
+}
+
  .jumbotron {
    padding: .7rem;
  }
@@ -56,6 +60,10 @@ h1.display-3 {
   border-bottom: 5px solid black;
 }
 
+.display-2 {
+ font-family: monospace; 
+}
+
 .description {
   font-family: monospace;
   text-align: center;
@@ -91,6 +99,7 @@ h3.description {
 
 a {
   font-family: monospace;
+  font-weight: bold;
 }
 
 $link-color: white;

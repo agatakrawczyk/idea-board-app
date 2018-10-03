@@ -19,7 +19,7 @@ class NotesController < ApplicationController
     @note = Note.new(note_params)
     @note.user = current_user
     if @note.save!
-      redirect_to notes_path, notice: "New note created!"
+      redirect_to notes_path, notice: "New idea created!"
     else
       flash[:alert] = "Please fill title field before saving"
       render "new"
