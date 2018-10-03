@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-   
-   
     <title>Project</title>
     <%= csrf_meta_tags %>
 
@@ -13,24 +11,18 @@
 
   <body>
     <header class="masterhead clearfix">
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <% if user_signed_in? %>
-          <a class="nav-link">
-          <%= link_to "HOME", home_path %></a>
-          <a class="nav-link">
-          <%= link_to "ALL NOTES", notes_path %></a>
-          <a class="nav-link">
-          <%= link_to "NEW NOTE", new_note_path %></a>
-          <a class="navbar-brand">
-            <%= link_to "Log out", destroy_user_session_path, method: :delete %></a>
+          <a class="nav-link active"><%= link_to "Home", home_path %></a>
+          <a class="nav-link active"><%= link_to "All ideas", notes_path %></a>
+          <a class="nav-link active"><%= link_to "New idea", new_note_path %></a>
+          <a class="nav-link active"><%= link_to "Log out", destroy_user_session_path, method: :delete %></a>
         <% else %>
-          <a class="navbar-brand">
-          <%= link_to "Sign in", new_user_session_path %></a>
-          <a class="nav-link">
-          <%= link_to "Register", new_user_registration_path %></a>
+          <a class="nav-link active"><%= link_to "Welcome", root_path %></a> 
+          <a class="nav-link active"><%= link_to "Log in", new_user_session_path %></a>
+          <a class="nav-link active"><%= link_to "Sign up", new_user_registration_path %></a>
         <% end %>
-        </nav>
-      </div>
+      </nav>
     </header>
 
 

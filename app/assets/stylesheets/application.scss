@@ -89,6 +89,10 @@ h3.description {
   color: black
 }
 
-$link-color: #b5b8b1;
+a {
+  font-family: monospace;
+}
+
+$link-color: white;
 
 @import "bootstrap";
