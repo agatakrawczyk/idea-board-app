@@ -15,7 +15,6 @@
  */
 
  .jumbotron {
-   opacity: 0.5;
    padding: .7rem;
  }
 
@@ -41,6 +40,37 @@
   font-size: 1.5rem;
 }
 
+.video {
+  float: right;
+}
+
+div.container {
+  padding: 10px 10px 10px 10px;
+}
+
+h1.display-3 {
+  font-family: monospace;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 5px solid black;
+}
+
+.description {
+  font-family: monospace;
+  text-align: center;
+}
+
+h2.description {
+  font-size: 22px;
+  padding-bottom: 50px;
+}
+
+h3.description {
+  font-size: 20px;
+  padding-top: 40px;
+}
+
 #note h4 {
   font-size: 2rem;
   font-weight: bold;
@@ -57,10 +87,6 @@
 
 .lead {
   color: black
-}
-
-body {
-  background-image: image-url("darkgreen.jpg");
 }
 
 $link-color: #b5b8b1;
