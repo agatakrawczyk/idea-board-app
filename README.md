@@ -1,8 +1,10 @@
-# README
+# Idea board application
+
+## About
 
 Multimedial website designed to collect creative inspiration and innovative ideas for projects in one place and in different formats: text, graphics or video. An additional feature in form of a calendar allows users to plan their work and to add important events to it. The aim of this project was to create a simple and effective application providing tools to plan work and stock multimedial information. 
 
-Steps that are necessary to get the application up and running: 
+## How to get the application up and running
 
 	git clone 
 	- clone the repository from GitHub to the current directory 
@@ -19,13 +21,13 @@ Steps that are necessary to get the application up and running:
 	bin/rails s
 	- run the application on the local server http://127.0.0.1:3000
 
-Ruby version 
-	- ruby '2.3.4' or newer
+## Technical requirements
+	- ruby '~> 2.3.4' or newer
+	- postrgreSQL
+	- Bundler 
+	- Ruby on Rails '~> 9.5' or newer 
 
-System dependencies
-	- postrgreSQL 
-
-Deployment instructions (Heroku)
+## Deployment instructions (for Heroku)
 	
 	git push heroku master 
 	- deploy the application to Heroku
@@ -33,14 +35,14 @@ Deployment instructions (Heroku)
 	heroku run rails db:migrate
 	- migrate the database 
 
-What i would improve in the future:
+## Future steps
 
-BACKEND
+### BACKEND
 * alow user to diplay the calendar in different formats: weekly/monthly/yearly
 * change displaying of the UTC time in meetings views  
 * add the link / area to add a new note when displaying all notes  
 
-FRONTEND
+### FRONTEND
 * Change the color of the links:light grey/white on the dark grey backgroung 
 * Style the calendar
 * Style dispaying of the notes 
