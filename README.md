@@ -20,15 +20,18 @@ Steps that are necessary to get the application up and running:
 	- run the application on the local server http://127.0.0.1:3000
 
 Ruby version 
-	ruby '2.3.4' or newer
+	- ruby '2.3.4' or newer
 
 System dependencies
-	postrgreSQL 
+	- postrgreSQL 
 
-Deployment instructions
+Deployment instructions (Heroku)
 	
 	git push heroku master 
+	- deploy the application to Heroku
+	
 	heroku run rails db:migrate
+	- migrate the database 
 
 What i would improve in the future:
 
